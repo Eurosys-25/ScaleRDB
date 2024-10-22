@@ -5,11 +5,11 @@ ScaleRDB: A Scalable Relational Database for Manycore Systems. (Summited in Euro
 ## Introduction
 ScaleRDB is a scalable relational database designed to improve database scalability on manycore platforms by enabling multiple microservices within a distributed database architecture to enhance parallelism.
 
-As demonstrated in our paper, the scalability bottlenecks of existing single-machine databases are mainly caused by two factors: the inefficient utilization of threads and the locking mechanisms in shared data structures.
+As demonstrated in our paper, the scalability bottlenecks of an existing relational database (MySQL) are mainly caused by two factors: the inefficient utilization of threads and the locking mechanisms in shared data structures.
 
-In order to address these scalability bottlenecks, we proposed ScaleRDB, which builds a database with multiple independent microservice instances called master and slave instances. Then, ScaleRDB distributes transactions among these instances and ensures local and global consistency through communication between the instances. Each instance manages its transactions and checkpoints independently to reduce data redundancy and optimize synchronization. We simplify the distributed architecture, reducing system complexity and overhead.
+In order to address these scalability bottlenecks, we proposed ScaleRDB, which builds a database with multiple independent microservice instances called master and slave instances. Then, ScaleRDB distributes transactions among these instances and ensures local and global consistency through communication between the database instances. Each database instance manages its transactions and checkpoints independently to reduce data redundancy and optimize synchronization. We simplify the distributed architecture, reducing system complexity and overhead.
 
-ScaleRDB is implemented to run multiple instances on a single manycore machine, achieving database scalability through efficient core utilization. We designed this system by adopting MySQL Cluster version 7.4.10 and utilizing the NDB engine. Our evaluation results show that ScaleRDB improves transaction throughput significantly compared to single-machine databases.
+ScaleRDB is implemented to run multiple instances on a single manycore machine, achieving database scalability through efficient core utilization. We designed this system by adopting MySQL Cluster version 7.4.10 and utilizing the NDB engine. Our evaluation results show that ScaleRDB improves transaction throughput significantly compared to an existing relational database (MySQL).
 
 
 ## The goals of ScaleRDB 
